@@ -238,7 +238,7 @@ def collision_sprite():
                     enemy.empty()
                     return False
                 else:
-                    player_invulnerable = 300
+                    player_invulnerable = 90
 
         return True
     else:
@@ -309,7 +309,7 @@ while True:
                 if music_run == 1:
                     music_run = 0
 
-                if score <= 6:
+                if score <= 20:
                     level = 0
                     floor.add(Floor('one'))
                     background.add(Background('one'))
@@ -318,7 +318,7 @@ while True:
                     enemy_speed = 0.1
                     pygame.mixer.music.load('assets/music/level_one.wav')
                     pygame.mixer.music.play(-1)
-                elif score > 6 and score <= 15:
+                elif score > 20 and score <= 50:
                     level = 1
                     floor.add(Floor('two'))
                     background.add(Background('two'))
@@ -328,7 +328,7 @@ while True:
                     enemy_speed = 0.13
                     pygame.mixer.music.load('assets/music/level_two.wav')
                     pygame.mixer.music.play(-1)
-                elif score > 15:
+                elif score > 50:
                     level = 2
                     floor.add(Floor('three'))
                     background.add(Background('three'))
